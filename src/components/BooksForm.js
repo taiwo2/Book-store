@@ -20,6 +20,7 @@ const BooksForm = () => {
     setCategory({category: null})
     return category
   }
+
   return (
     <form onSubmit={() => handleSubmit()}>
       <input placeholder="Book Title" onClick={() => handleChange(title)} />

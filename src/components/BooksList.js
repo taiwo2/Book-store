@@ -3,6 +3,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Book from './Book';
 
+const handleRemoveBook = () => {
+  books.filter(book => book.id !== id)
+}
 const BooksList = ({ books }) => (
   <table>
     <th>Book ID</th>
@@ -16,6 +19,7 @@ const BooksList = ({ books }) => (
         category={book.category}
       />
     ))}
+    <button onClick={() => handleRemoveBook()}>remove book</button>
   </table>
 );
 
