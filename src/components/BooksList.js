@@ -5,12 +5,13 @@ const BooksList = (props) => {
     <div>
       <table>
         <tbody>
-          <tr>
             {TableStores.map((book,id) => {
+              <tr>
                 <td key={id}>{book.id}</td>
-          })}
-          
-          </tr>
+                <td>{book.title}</td>
+                <td>{book.category}</td>
+              </tr>
+          })} 
         </tbody>
       </table>
     </div>
