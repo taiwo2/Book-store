@@ -1,15 +1,28 @@
-import React from 'react'
-
 const BooksForm = () => {
-  return (
-    <div>
-      <form>
-        <input type="text" />
-        <input  type="checkbox" />
-        <button>submit</button>
-      </form>
-    </div>
-  )
-}
+  const categories = [
+    'Action',
+    'Biography',
+    'History',
+    'Horror',
+    'Kids',
+    'Learning',
+    'Sci-Fi',
+  ];
 
-export default BooksForm
+  return (
+    <form>
+      <input placeholder="Book Title" />
+      <select id="category" name="category">
+        <option value="" selected>
+          Choose category
+        </option>
+        {categories.forEach((category) => {
+          <option value={category}>{category}</option>;
+        })}
+      </select>
+      <input type="submit" value="Submit" />
+    </form>
+  );
+};
+
+export default BooksForm;
