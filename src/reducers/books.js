@@ -23,10 +23,10 @@ const initialState = {
 
 const booksReducer = (state = initialState, action) => {
   if (action.type === CREATE_BOOK) {
-    return { books: state.books };
+    return [...state, action.book];
   }
   if (action.type === REMOVE_BOOK) {
-    return { books: state.books };
+    return state.filter((book) => book.bookId !== action.book);
   }
   return state.books;
 };
