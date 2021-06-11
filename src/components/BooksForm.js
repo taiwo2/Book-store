@@ -10,12 +10,18 @@ const BooksForm = () => {
   ];
 
   const [title, setTitle] = useState('')
-  const [category, setCategory] = useState();
+  const [category, setCategory] = useState(null);
   const handleChange = (e) => {
     setTitle(e.current.value)
   }
+
+  const handleSubmit = (e) => {
+    e.preventDafault()
+    setCategory({category: null})
+    return category
+  }
   return (
-    <form>
+    <form onSubmit={() => handleSubmit()}>
       <input placeholder="Book Title" onClick={() => handleChange(title)} />
       <select id="category" name="category">
         <option value="" selected>
