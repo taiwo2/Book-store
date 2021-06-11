@@ -1,7 +1,7 @@
-# Calculator App
+# Bookstore App
 
 
-- This is React calculator app which was built fully using JavaScript and JSX.In this app, you can do your calculations very easily and fastly.
+- This is React Bookstore app which was built fully using React and JSX. In this app, you can manage bookstore assets in a very easily and fast.
 
 ## Live Demo
 
@@ -21,9 +21,9 @@
 ## Getting Started
 
 - Clone the repo `https://github.com/taiwo2/Book-store.git`
-- cd `into` the project
+- cd into the project
 - Run `git pull origin app`
-- Run `yarn install` or `npm install` to install dependencies
+- Run `npm install` to install dependencies
 - On the terminal run `npm run start` open up the live server
 - To run tests write `npm run test` on the terminal
 
