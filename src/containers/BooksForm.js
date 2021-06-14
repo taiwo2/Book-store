@@ -48,38 +48,43 @@ class BooksForm extends React.Component {
     ];
     const { title, category } = this.state;
     return (
-      <form>
-        <input
-          type="text"
-          id="book-title"
-          name="book-title"
-          onChange={this.handleChange}
-          value={title}
-          placeholder="Book Title"
-        />
-        <select
-          onChange={this.handleChange}
-          value={category}
-          id="book-category"
-        >
-          <option value="">Select a category:</option>
-          {categories.map((cat) => (
-            <option cat={cat} key={cat}>
-              {cat}
-            </option>
-          ))}
-        </select>
-        <input type="submit" value="Submit" onClick={this.handleSubmit} />
-      </form>
+      <div className="book-form">
+        <form>
+          <input
+            type="text"
+            id="book-title"
+            name="book-title"
+            className="book-title"
+            onChange={this.handleChange}
+            value={title}
+            placeholder="Book Title"
+          />
+          <select
+            onChange={this.handleChange}
+            value={category}
+            id="book-category"
+            className="book-category"
+          >
+            <option value="">Select a category:</option>
+            {categories.map((cat) => (
+              <option cat={cat} key={cat}>
+                {cat}
+              </option>
+            ))}
+          </select>
+          <input
+            type="submit"
+            className="book-submit"
+            value="Submit"
+            onClick={this.handleSubmit}
+          />
+        </form>
+      </div>
     );
   }
 }
 
 BooksForm.propTypes = {
-  dispatch: PropTypes.func,
-};
-
-BooksForm.defaultProps = {
-  dispatch: null,
+  dispatch: PropTypes.func.isRequired,
 };
 export default connect(null)(BooksForm);

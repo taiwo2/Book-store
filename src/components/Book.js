@@ -1,24 +1,57 @@
 /* eslint-disable react/prop-types */
 import PropTypes from 'prop-types';
+import circle from '../styles/circle.png';
 
 const Book = ({
   bookId, title, category, handleClick,
 }) => (
-  <tr>
-    <td>{bookId}</td>
-    <td>{title}</td>
-    <td>{category}</td>
-    <td>
-      <button
-        type="button"
-        onClick={() => {
-          handleClick({ bookId, title, category });
-        }}
-      >
-        Remove Book
+  <div className="book-item font-robotoslab">
+    <div className="book-data">
+      <p className="category font-montserrat">{category}</p>
+      <p className="title font-montserrat">{title}</p>
+      <p className="author">Author Name</p>
+      <div className="links">
+        <button type="button" className="link">
+          Comments
+        </button>
+        <span className="tick" />
+        <button
+          className="link"
+          type="button"
+          onClick={() => {
+            handleClick({ bookId, title, category });
+          }}
+        >
+          Remove
+        </button>
+        <span className="tick" />
+        <button type="button" className="link">
+          Edit
+        </button>
+      </div>
+    </div>
+    <div className="reading-progress">
+      <img className="oval" alt="circle" src={circle} />
+      <div>
+        <p className="percent-complete font-montserrat">
+          {Math.floor(Math.random() * 100)}
+          %
+        </p>
+        <p className="completed font-montserrat">Completed</p>
+      </div>
+    </div>
+    <div className="line-2" />
+    <div className="chapter-info">
+      <p className="current-chapter font-robotoslab">CURRENT CHAPTER</p>
+      <p className="chapter font-robotoslab">
+        Chapter
+        {Math.floor(Math.random() * 20)}
+      </p>
+      <button type="button" className="update-progress font-robotoslab">
+        UPDATE CHAPTER
       </button>
-    </td>
-  </tr>
+    </div>
+  </div>
 );
 
 Book.propTypes = {

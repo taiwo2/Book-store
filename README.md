@@ -1,7 +1,9 @@
 # Bookstore App
 
-
 - This is React Bookstore app which was built fully using React and JSX. In this app, you can manage bookstore assets very easily and fast.
+
+![screenshot](./app_screenshot.png)
+
 
 ## Live Demo
 

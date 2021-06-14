@@ -3,16 +3,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import { removeBook, changeFilter } from '../actions';
-import CategoryFilter from '../components/CategoryFilter';
+import { removeBook } from '../actions';
 
 const BooksList = ({ books, filter, dispatch }) => {
   const handleRemoveBook = ({ bookId }) => {
     dispatch(removeBook(bookId));
-  };
-
-  const handleFilterChange = (e) => {
-    dispatch(changeFilter(e.target.value));
   };
 
   let filteredBooks = '';
@@ -43,17 +38,7 @@ const BooksList = ({ books, filter, dispatch }) => {
 
   return (
     <>
-      <CategoryFilter handleChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>{filteredBooks}</tbody>
-      </table>
+      <div>{filteredBooks}</div>
     </>
   );
 };
