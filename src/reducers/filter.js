@@ -1,6 +1,6 @@
-export const CHANGE_FILTER = "CHANGE_FILTER";
+export const CHANGE_FILTER = 'CHANGE_FILTER';
 
-const initialState = "All";
+const initialState = 'All';
 
 const filterReducer = (state = initialState, action) => {
   if (action.type === CHANGE_FILTER) {

@@ -1,6 +1,6 @@
 const CREATE_BOOK = 'CREATE_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
-const FILTER_BOOK = 'FILTER_BOOK';
+
 const initialState = {
   books: [
     {
@@ -22,16 +22,34 @@ const initialState = {
 };
 
 const booksReducer = (state = initialState, action) => {
-  if (action.type === CREATE_BOOK) {
-    return [...state, action.book];
+  let res;
+
+  switch (action.type) {
+    case CREATE_BOOK:
+      res = [...state, action.book];
+      break;
+    case REMOVE_BOOK:
+      res = state
+        .slice(
+          0,
+          state.findIndex((element) => element.bookId === action.book),
+        )
+        .concat(
+          state.slice(
+            state.findIndex((element) => element.bookId === action.book) + 1,
+            state.length,
+          ),
+        );
+      break;
+    default:
+      if (localStorage.bookstore) {
+        return JSON.parse(localStorage.bookstore);
+      }
+      localStorage.bookstore = JSON.stringify(state.books);
+      return state.books;
   }
-  if (action.type === REMOVE_BOOK) {
-    return state.filter((book) => book.bookId !== action.book);
-  }
-  if (action.type === FILTER_BOOK) {
-    return state.filter((book) => book.bookId === action.book)
-  }
-  return state.books;
+  localStorage.bookstore = JSON.stringify(res);
+  return res;
 };
 
 export { CREATE_BOOK, REMOVE_BOOK };
