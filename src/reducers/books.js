@@ -1,6 +1,6 @@
 const CREATE_BOOK = 'CREATE_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
-
+const FILTER_BOOK = 'FILTER_BOOK';
 const initialState = {
   books: [
     {
@@ -27,6 +27,9 @@ const booksReducer = (state = initialState, action) => {
   }
   if (action.type === REMOVE_BOOK) {
     return state.filter((book) => book.bookId !== action.book);
+  }
+  if (action.type === FILTER_BOOK) {
+    return state.filter((book) => book.bookId === action.book)
   }
   return state.books;
 };
