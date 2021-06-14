@@ -4,10 +4,12 @@ import Navbar from './Navbar';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navbar />
-      <BooksList />
-      <BooksForm />
+      <div className="App">
+        <BooksList />
+        <BooksForm />
+      </div>
     </div>
   );
 }
