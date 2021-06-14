@@ -262,7 +262,6 @@ body {
 }
 
 form {
-  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -271,6 +270,7 @@ form {
 
 .book-title {
   width: 60%;
+  margin-left: 100px;
   height: 45px;
   padding: 13px 571px 13px 17px;
   border-radius: 4px;
