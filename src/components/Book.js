@@ -5,10 +5,10 @@ import circle from '../styles/circle.png';
 const Book = ({
   bookId, title, category, handleClick,
 }) => (
-  <div className="book-item">
+  <div className="book-item font-robotoslab">
     <div className="book-data">
-      <p className="category">{category}</p>
-      <p className="title">{title}</p>
+      <p className="category font-montserrat">{category}</p>
+      <p className="title font-montserrat">{title}</p>
       <p className="author">Author Name</p>
       <div className="links">
         <button type="button" className="link">
@@ -33,21 +33,21 @@ const Book = ({
     <div className="reading-progress">
       <img className="oval" alt="circle" src={circle} />
       <div>
-        <p className="percent-complete">
+        <p className="percent-complete font-montserrat">
           {Math.floor(Math.random() * 100)}
           %
         </p>
-        <p className="completed">Completed</p>
+        <p className="completed font-montserrat">Completed</p>
       </div>
     </div>
     <div className="line-2" />
     <div className="chapter-info">
-      <p className="current-chapter">CURRENT CHAPTER</p>
-      <p className="chapter">
+      <p className="current-chapter font-robotoslab">CURRENT CHAPTER</p>
+      <p className="chapter font-robotoslab">
         Chapter
         {Math.floor(Math.random() * 20)}
       </p>
-      <button type="button" className="update-progress">
+      <button type="button" className="update-progress font-robotoslab">
         UPDATE CHAPTER
       </button>
     </div>

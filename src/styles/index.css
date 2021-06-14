@@ -29,6 +29,10 @@ body {
   border-radius: 4px;
   box-shadow: 0 0 60px 0 var(--black-5);
   background-color: #fafafa;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
 }
 
 .navbar {
@@ -36,7 +40,6 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: Montserrat, "Times New Roman", Times, serif;
   letter-spacing: normal;
   color: #0290ff;
   background: white;
@@ -44,7 +47,6 @@ body {
 
 .title {
   margin: 6px 47px 2px 0;
-  font-family: Montserrat, "Times New Roman", Times, serif;
   font-size: 30px;
   letter-spacing: normal;
   color: #0290ff;
@@ -58,12 +60,7 @@ body {
 .navbar-link {
   margin-right: 2rem;
   opacity: 0.5;
-  font-family: Montserrat, "Times New Roman", Times, serif;
   font-size: 13px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 1.9px;
   color: var(--black-two);
   text-decoration: none;
@@ -79,7 +76,6 @@ body {
 
 .book-item {
   display: flex;
-  font-family: RobotoSlab, "Times New Roman", Times, serif;
   width: 90%;
   height: 17rem;
   margin: 37px 100px;
@@ -102,7 +98,6 @@ body {
   height: 1.8rem;
   margin: 0 3.9rem 0 0;
   opacity: 0.5;
-  font-family: Montserrat, "Times New Roman", Times, serif;
   font-size: 14px;
   letter-spacing: normal;
   color: var(--black-two);
@@ -162,12 +157,7 @@ body {
 
 .percent-complete {
   margin: 1px 92px 0 11px;
-  font-family: Montserrat, "Times New Roman", Times, serif;
   font-size: 32px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: var(--black-two);
 }
@@ -184,12 +174,7 @@ body {
 .completed {
   margin: 7px 79px 12px 12px;
   opacity: 0.5;
-  font-family: Montserrat, "Times New Roman", Times, serif;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: var(--black-two);
 }
@@ -207,7 +192,6 @@ body {
 
 .current-chapter {
   opacity: 0.5;
-  font-family: RobotoSlab, "Times New Roman", Times, serif;
   font-size: 13px;
   font-weight: 300;
   font-stretch: normal;
@@ -220,7 +204,6 @@ body {
 .chapter {
   margin-top: 1rem;
   height: 21px;
-  font-family: RobotoSlab, "Times New Roman", Times, serif;
   font-size: 16px;
   font-weight: 300;
   font-stretch: normal;
@@ -231,7 +214,6 @@ body {
 }
 
 .update-progress {
-  font-family: RobotoSlab, "Times New Roman", Times, serif;
   font-size: 11px;
   font-weight: 300;
   font-stretch: normal;
@@ -279,4 +261,12 @@ form {
   border-radius: 3px;
   background-color: #0290ff;
   color: white;
+}
+
+.font-montserrat {
+  font-family: Montserrat, "Times New Roman", Times, serif;
+}
+
+.font-robotoslab {
+  font-family: RobotoSlab, "Times New Roman", Times, serif;
 }
