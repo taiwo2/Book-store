@@ -45,7 +45,7 @@ const BooksList = ({ books, filter, dispatch }) => {
   return (
     <>
       <CategoryFilter handleChange={handleFilterChange} />
-      <table className="Lesson-Panel">
+      <table>
         <thead>
           <tr>
             <th>Id</th>

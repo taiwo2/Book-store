@@ -1,5 +1,8 @@
 body {
-  background: white;
+  width: 1600px;
+  height: 1434px;
+  padding: 149px 60px 123px 100px;
+  background-color: var(--pale-grey);
 }
 
 .App {
