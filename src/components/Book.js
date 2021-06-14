@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import PropTypes from 'prop-types';
+import '../styles/index.css';
 
 const Book = ({
   bookId, title, category, handleClick,
@@ -11,6 +12,7 @@ const Book = ({
     <td>
       <button
         type="button"
+        className="Rectangle-2"
         onClick={() => {
           handleClick({ bookId, title, category });
         }}

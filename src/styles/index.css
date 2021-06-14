@@ -24,3 +24,12 @@ body {
   border: solid 1px #e8e8e8;
   background-color: var(--white);
 }
+
+.Rectangle-2 {
+  width: 184px;
+  height: 33px;
+  margin: 12px 0 9px 59px;
+  padding: 7px 19px 8px 22px;
+  border-radius: 3px;
+  background-color: #0290ff;
+}

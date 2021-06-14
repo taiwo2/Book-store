@@ -48,7 +48,7 @@ class BooksForm extends React.Component {
     ];
     const { title, category } = this.state;
     return (
-      <form className="Lesson-Panel">
+      <form>
         <input
           type="text"
           id="book-title"
