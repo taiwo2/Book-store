@@ -1,26 +1,57 @@
 /* eslint-disable react/prop-types */
 import PropTypes from 'prop-types';
-import '../styles/index.css';
+import circle from '../styles/circle.png';
 
 const Book = ({
   bookId, title, category, handleClick,
 }) => (
-  <tr className="Lesson-Panel">
-    <td>{bookId}</td>
-    <td>{title}</td>
-    <td>{category}</td>
-    <td>
-      <button
-        type="button"
-        className="Rectangle-2"
-        onClick={() => {
-          handleClick({ bookId, title, category });
-        }}
-      >
-        Remove Book
+  <div className="book-item">
+    <div className="book-data">
+      <p className="category">{category}</p>
+      <p className="title">{title}</p>
+      <p className="author">Author Name</p>
+      <div className="links">
+        <button type="button" className="link">
+          Comments
+        </button>
+        <span className="tick" />
+        <button
+          className="link"
+          type="button"
+          onClick={() => {
+            handleClick({ bookId, title, category });
+          }}
+        >
+          Remove
+        </button>
+        <span className="tick" />
+        <button type="button" className="link">
+          Edit
+        </button>
+      </div>
+    </div>
+    <div className="reading-progress">
+      <img className="oval" alt="circle" src={circle} />
+      <div>
+        <p className="percent-complete">
+          {Math.floor(Math.random() * 100)}
+          %
+        </p>
+        <p className="completed">Completed</p>
+      </div>
+    </div>
+    <div className="line-2" />
+    <div className="chapter-info">
+      <p className="current-chapter">CURRENT CHAPTER</p>
+      <p className="chapter">
+        Chapter
+        {Math.floor(Math.random() * 20)}
+      </p>
+      <button type="button" className="update-progress">
+        UPDATE CHAPTER
       </button>
-    </td>
-  </tr>
+    </div>
+  </div>
 );
 
 Book.propTypes = {
