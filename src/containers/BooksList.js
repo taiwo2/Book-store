@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
+import '../styles/index.css';
 
 const BooksList = ({ books, filter, dispatch }) => {
   const handleRemoveBook = ({ bookId }) => {
@@ -44,7 +45,7 @@ const BooksList = ({ books, filter, dispatch }) => {
   return (
     <>
       <CategoryFilter handleChange={handleFilterChange} />
-      <table>
+      <table className="Lesson-Panel">
         <thead>
           <tr>
             <th>Id</th>
